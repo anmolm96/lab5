@@ -12,12 +12,18 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
-function anagrammedName(name) {
+$('.friend-name').click(function()
+{
+	event.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
+})
+
+function anagrammedName(name)
+{
 	// Thanks, Internet Anagram Server!
-	
 	if (name == "Doug Engelbart") {
 		return "Notable Grudge";
-	} 
+	}
 	else if (name == "Ivan Sutherland") {
 		return "Vandal Heist Run";
 	}
